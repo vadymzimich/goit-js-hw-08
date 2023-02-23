@@ -30,18 +30,8 @@ const load = key => {
   }
 };
 
-// const storageData = load(FEEDBACK_FORM_STATE);
-// if (storageData) {
-//   email.value = storageData.email;
-//   message.value = storageData.message;
-// }
-
-const savedEmail = localStorage.getItem('email');
-if (savedEmail) {
-  email.value = savedEmail;
-}
-
-const savedMessage = localStorage.getItem('message');
-if (savedMessage) {
-  message.value = savedMessage;
+const storageData = load(FEEDBACK_FORM_STATE);
+if (storageData) {
+  email.value = storageData.email;
+  message.value = storageData.message;
 }
